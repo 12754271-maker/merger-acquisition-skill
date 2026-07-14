@@ -1,0 +1,24 @@
+# .gitignore
+
+# 个人身份配置（包含真实姓名、联系方式等）
+skills/ma/并购法律工作总控/references/practice-profile.md
+
+# 本地工作区
+_matter_workspace/
+.claw/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+
+# 临时文件
+*.tmp
+*.log
