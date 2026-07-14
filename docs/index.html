@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>China M&A Legal Skills — 并购法律 AI Skill 包</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --muted: #8b949e;
+    --accent: #58a6ff;
+    --green: #3fb950;
+    --orange: #d2991d;
+    --purple: #a371f7;
+    --red: #f85149;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .hero {
+    text-align: center;
+    padding: 80px 24px 60px;
+    background: linear-gradient(180deg, #1a2332 0%, var(--bg) 100%);
+  }
+  .hero h1 { font-size: 2.8em; margin-bottom: 12px; }
+  .hero .subtitle { font-size: 1.2em; color: var(--muted); margin-bottom: 24px; }
+  .badges { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 32px; }
+  .badge {
+    padding: 6px 14px; border-radius: 20px; font-size: 0.85em; font-weight: 600;
+    background: var(--card); border: 1px solid var(--border);
+  }
+  .badge.green { color: var(--green); border-color: var(--green); }
+  .badge.blue { color: var(--accent); border-color: var(--accent); }
+  .badge.purple { color: var(--purple); border-color: var(--purple); }
+  .badge.orange { color: var(--orange); border-color: var(--orange); }
+  .cta {
+    display: inline-block; padding: 14px 36px; border-radius: 8px;
+    background: var(--green); color: #000; font-weight: 700; font-size: 1.05em;
+    text-decoration: none; transition: transform 0.2s;
+  }
+  .cta:hover { transform: scale(1.05); }
+  .cta-secondary {
+    display: inline-block; padding: 14px 36px; border-radius: 8px;
+    background: transparent; color: var(--accent); font-weight: 700; font-size: 1.05em;
+    text-decoration: none; border: 2px solid var(--accent); margin-left: 12px;
+    transition: background 0.2s;
+  }
+  .cta-secondary:hover { background: rgba(88,166,255,0.1); }
+
+  .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+  section { padding: 60px 0; }
+  section:nth-child(even) { background: var(--card); }
+  h2 { font-size: 1.8em; margin-bottom: 32px; text-align: center; }
+  h2 .icon { margin-right: 8px; }
+
+  /* Flow */
+  .flow { display: flex; justify-content: center; align-items: center; gap: 0; flex-wrap: wrap; }
+  .flow-node {
+    padding: 20px 24px; border-radius: 12px; text-align: center;
+    background: var(--card); border: 1px solid var(--border); min-width: 120px;
+    transition: transform 0.2s;
+  }
+  .flow-node:hover { transform: translateY(-4px); }
+  .flow-node .emoji { font-size: 2em; display: block; margin-bottom: 8px; }
+  .flow-node .label { font-weight: 700; font-size: 0.95em; }
+  .flow-node .desc { font-size: 0.8em; color: var(--muted); margin-top: 4px; }
+  .flow-arrow { font-size: 1.5em; color: var(--muted); padding: 0 8px; }
+
+  /* Cards */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 24px; transition: border-color 0.2s;
+  }
+  .card:hover { border-color: var(--accent); }
+  .card .card-emoji { font-size: 2em; margin-bottom: 12px; }
+  .card h3 { font-size: 1.1em; margin-bottom: 8px; }
+  .card p { color: var(--muted); font-size: 0.9em; }
+
+  /* Arch */
+  pre { background: #0d1117; border: 1px solid var(--border); border-radius: 8px; padding: 20px; overflow-x: auto; font-size: 0.85em; line-height: 1.5; }
+
+  /* Examples */
+  .examples { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+  .example {
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 20px;
+  }
+  .example .say { color: var(--accent); font-weight: 600; font-size: 0.95em; }
+  .example .route { color: var(--muted); font-size: 0.85em; margin-top: 6px; }
+  .example .route span { color: var(--green); }
+
+  .footer { text-align: center; padding: 40px 24px; color: var(--muted); font-size: 0.85em; }
+  .footer a { color: var(--accent); }
+
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.8em; }
+    .flow { flex-direction: column; }
+    .flow-arrow { transform: rotate(90deg); }
+    .cta-secondary { margin-left: 0; margin-top: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>🏛️ China M&A Legal Skills</h1>
+  <p class="subtitle">面向中国并购法律实务的 AI Agent Skills 集合</p>
+  <div class="badges">
+    <span class="badge green">6 Skills</span>
+    <span class="badge blue">中文优化</span>
+    <span class="badge purple">M&A 全流程</span>
+    <span class="badge orange">MIT 开源</span>
+  </div>
+  <br>
+  <a class="cta" href="https://github.com/12754271-maker/merger-acquisition-skill">📦 GitHub 仓库</a>
+  <a class="cta-secondary" href="#install">⚡ 一键安装</a>
+</div>
+
+<section id="flow">
+  <div class="container">
+    <h2><span class="icon">🔄</span> 工作流</h2>
+    <div class="flow">
+      <div class="flow-node">
+        <span class="emoji">📋</span>
+        <span class="label">DD 尽调</span>
+        <span class="desc">清单·报告</span>
+      </div>
+      <span class="flow-arrow">→</span>
+      <div class="flow-node">
+        <span class="emoji">📐</span>
+        <span class="label">方案设计</span>
+        <span class="desc">结构·税务</span>
+      </div>
+      <span class="flow-arrow">→</span>
+      <div class="flow-node">
+        <span class="emoji">📝</span>
+        <span class="label">交易文件</span>
+        <span class="desc">SPA·谈判</span>
+      </div>
+      <span class="flow-arrow">→</span>
+      <div class="flow-node">
+        <span class="emoji">✅</span>
+        <span class="label">交割整合</span>
+        <span class="desc">核查·风险</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <h2><span class="icon">📦</span> Skill 一览</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="card-emoji">🧠</div>
+        <h3>并购法律工作总控</h3>
+        <p>语义路由 / 事项隔离 / 法规校验 / 质量门调度。作为总入口自动分派到对应的子 Skill。</p>
+      </div>
+      <div class="card">
+        <div class="card-emoji">🔍</div>
+        <h3>并购尽职调查</h3>
+        <p>尽调方案制定、清单生成、发现问题分析、DD 报告撰写。含行业可扩展核查模板。</p>
+      </div>
+      <div class="card">
+        <div class="card-emoji">📐</div>
+        <h3>并购交易方案设计</h3>
+        <p>股权 vs 资产收购对比、税务筹划框架、支付安排设计、交割条件规划。</p>
+      </div>
+      <div class="card">
+        <div class="card-emoji">📝</div>
+        <h3>并购交易文件</h3>
+        <p>SPA / SHA / APA 起草、核心条款谈判要点、附件体系。含买方/卖方双视角条款库。</p>
+      </div>
+      <div class="card">
+        <div class="card-emoji">✅</div>
+        <h3>并购交割与整合</h3>
+        <p>交割条件核查表、交割流程管理、交割备忘录、整合风险评估。</p>
+      </div>
+      <div class="card">
+        <div class="card-emoji">🌏</div>
+        <h3>跨境并购专项</h3>
+        <p>ODI 备案、外资审查、跨境支付、适用法律冲突分析。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="examples">
+  <div class="container">
+    <h2><span class="icon">💬</span> 这样用</h2>
+    <div class="examples">
+      <div class="example">
+        <div class="say">"帮我写一份制造业并购尽调清单"</div>
+        <div class="route">→ 自动路由到 <span>并购尽职调查</span></div>
+      </div>
+      <div class="example">
+        <div class="say">"我是买方，起草 SPA 核心条款"</div>
+        <div class="route">→ 自动路由到 <span>并购交易文件</span></div>
+      </div>
+      <div class="example">
+        <div class="say">"收购一家新加坡公司要什么流程"</div>
+        <div class="route">→ 自动路由到 <span>跨境并购专项</span></div>
+      </div>
+      <div class="example">
+        <div class="say">"股权收购和资产收购怎么选"</div>
+        <div class="route">→ 自动路由到 <span>并购交易方案设计</span></div>
+      </div>
+      <div class="example">
+        <div class="say">"帮我准备交割条件核查表"</div>
+        <div class="route">→ 自动路由到 <span>并购交割与整合</span></div>
+      </div>
+      <div class="example">
+        <div class="say">"做个 XX 公司的并购尽调方案"</div>
+        <div class="route">→ <span>总控</span> 判断意图 → 路由到 <span>尽职调查</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="install">
+  <div class="container">
+    <h2><span class="icon">⚡</span> 安装</h2>
+    <pre># 1. 克隆仓库
+git clone https://github.com/12754271-maker/merger-acquisition-skill.git
+
+# 2. 复制到 QClaw skills 目录
+cp -r merger-acquisition-skill/skills/ma ~/.qclaw/skills/ma/
+
+# 3. 编辑你的身份信息
+# 编辑 ~/.qclaw/skills/ma/并购法律工作总控/references/practice-profile.md
+
+# 4. 重启 QClaw，开始使用 🎉</pre>
+  </div>
+</section>
+
+<div class="footer">
+  <p>Made with ❤️ by <a href="https://github.com/12754271-maker">12754271-maker</a> · <a href="https://github.com/12754271-maker/merger-acquisition-skill">GitHub</a> · MIT License</p>
+</div>
+
+</body>
+</html>
